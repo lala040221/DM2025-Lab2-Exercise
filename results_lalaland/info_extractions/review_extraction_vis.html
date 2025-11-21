@@ -1,0 +1,267 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+Movies / Reviews 
+La La Land Review 
+by Jean-Luc Botbyl 
+
+Director: Damien Chazelle 
+Writer: Damien Chazelle 
+Starring: Emma Stone, Ryan Gosling 
+Genre: Musical/Drama 
+I don’t think any movie – ever – has <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#D2E3FC;">made me feel things</span> in the way that La La 
+Land did. 
+Actually, I don’t know that I’ve ever had a real life experience that’s done what La La 
+Land has to me, which is, frankly, <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">astonishing</span>. 
+It’s rare that I see a movie that, in retrospect, <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">makes every other movie I’ve seen 
+seem just a tiny bit worse</span>. But La La Land is one of those films. It’s a film <span class="lx-highlight" data-idx="3" style="background-color:#C8E6C9;">brimming 
+with life and energy unlike anything I’ve ever seen</span>. Watching the film unfold before 
+my eyes – <span class="lx-highlight" data-idx="4" style="background-color:#D2E3FC;">it was an experience</span>. One that I will likely never be able to replicate, but I 
+will <span class="lx-highlight" data-idx="5" style="background-color:#D2E3FC;">desperately try to whenever I can</span>. It’s akin to coming out of a concert, and 
+desperately listening to music by that band for weeks after, hoping to capture even a 
+shred of the emotions felt in the moment.
+&quot;&quot;&quot;
+
+**Page 2**
+&quot;&quot;&quot;
+La La Land is a film that is <span class="lx-highlight" data-idx="6" style="background-color:#C8E6C9;">successful on almost every axis</span>, and it really had to, to sell 
+what it’s doing. This applies especially to the performs, and, surprising no one, both 
+Emma Stone and Ryan Gosling were <span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">outstanding</span>. The duo share an <span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">incredible 
+chemistry</span> from their first, speechless, interaction with one another. 
+For a film that is ostensibly a musical, La La Land often relies on quieter moments, 
+free of dialogue or singing. Fortunately, the two leads are <span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">adept at handling such 
+roles</span>. Their control over their bodies and facial expressions is <span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">even more impressive</span> 
+than their ability to deliver their lines. The wide range of performance types in this 
+movie really hammers home just how <span class="lx-highlight" data-idx="11" style="background-color:#C8E6C9;">incredibly talented</span> Stone and Gosling are. 
+They go from conversing to singing and dancing as if it’s nothing, and the bombastic, 
+often over the top musical numbers are <span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">a pleasure to watch</span>. <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">The choreography and 
+cinematography are both excellent</span>, capturing the vibrant emotions conveyed by the 
+slightest movements of the performers. 
+And to be perfectly clear, <span class="lx-highlight" data-idx="14" style="background-color:#C8E6C9;">I’m not a huge of fan of musical numbers in films</span>. <span class="lx-highlight" data-idx="15" style="background-color:#C8E6C9;">I 
+generally find them distracting and immersion-breaking</span>, but <span class="lx-highlight" data-idx="16" style="background-color:#C8E6C9;">here, they were a treat</span>. 
+Whenever one began, <span class="lx-highlight" data-idx="17" style="background-color:#D2E3FC;">I found myself becoming giddy with excitement</span>. 
+My enjoyment of them here stems partially from <span class="lx-highlight" data-idx="18" style="background-color:#C8E6C9;">them being an important element 
+of the film</span> – it is, after all, about an actress and a pianist. It’s kind of what they do, 
+and <span class="lx-highlight" data-idx="19" style="background-color:#C8E6C9;">expressing themselves to one another, through their art, is more powerful than 
+any scrap of dialogue could have been</span>. 
+That being said, I likely could be convinced otherwise, considering the quality of La 
+La Land’s script. It’s compacted to the point where <span class="lx-highlight" data-idx="20" style="background-color:#C8E6C9;">every uttered word feels 
+absolutely necessary</span>. <span class="lx-highlight" data-idx="21" style="background-color:#C8E6C9;">It never gets bogged down in explaining things or overlong 
+conversations padded out to add to the run time</span>. No, this is a film in which <span class="lx-highlight" data-idx="22" style="background-color:#C8E6C9;">very little 
+actually feels scripted</span>. It’s a story about two humans, and <span class="lx-highlight" data-idx="23" style="background-color:#C8E6C9;">those characters act, 
+speak, and dream like real people</span>. 
+And it’s this element of the film that explains my emotional reaction to it. <span class="lx-highlight" data-idx="24" style="background-color:#D2E3FC;">I was so 
+engrossed in the story of Mia and Sebastian that it became easy to forget that what I 
+was watching wasn’t real</span>. Yeah, that’s something that gets tossed around a lot, and 
+I’m certainly guilty of it. What can I say? I’m often prone to hyperbole. But when I 
+apply that phrase to La La Land, trust me when I say that <span class="lx-highlight" data-idx="25" style="background-color:#C8E6C9;">there is no hyperbole there</span>
+&quot;&quot;&quot;
+
+**Page 3**
+&quot;&quot;&quot;
+at all. 
+It isn’t just the characters that this applies to – it’s the setting as well. While the film 
+takes place in modern day Los Angeles, <span class="lx-highlight" data-idx="26" style="background-color:#C8E6C9;">it manages to also capture an older version of 
+the city</span>. After all, <span class="lx-highlight" data-idx="27" style="background-color:#C8E6C9;">it is an homage to classic films of this genre</span>. There’s even a scene, 
+about halfway through, where the film directly acknowledges this. The moment 
+applies to something else that’s going on, of course, but it seems difficult to not miss 
+the self-referential nature of the lines. 
+To be entirely honest, <span class="lx-highlight" data-idx="28" style="background-color:#C8E6C9;">I don’t really have much of an affinity for the so-called “Golden 
+Age.”</span> I mean, yeah, I can recognize their importance and impact. But I won’t be able 
+to point out every little detail about La La Land that acts as an homage. However, I 
+know the aesthetic, and <span class="lx-highlight" data-idx="29" style="background-color:#C8E6C9;">I do truly love how that is applied to the modern era.</span> 
+<span class="lx-highlight" data-idx="30" style="background-color:#C8E6C9;">There’s very little – nothing, actually – that didn’t impress me about La La Land.</span> <span class="lx-highlight" data-idx="31" style="background-color:#C8E6C9;">It’s 
+an intricately crafted, beautiful narrative, one that is truly deserving of every last bit 
+of praise.</span> If you haven’t already (or can’t, due to the film being released on three 
+different dates, depending on where you live), <span class="lx-highlight" data-idx="32" style="background-color:#D2E3FC;">make it your number one priority to 
+see this film.</span>
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="32" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/33</span> |
+          Pos <span id="posInfo">[399-410]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "audience_impact", "text": "made me feel things", "color": "#D2E3FC", "startPos": 221, "endPos": 240, "beforeText": "\n \nDirector: Damien Chazelle \nWriter: Damien Chazelle \nStarring: Emma Stone, Ryan Gosling \nGenre: Musical/Drama \nI don\u2019t think any movie \u2013 ever \u2013 has ", "extractionText": "made me feel things", "afterText": " in the way that La La \nLand did. \nActually, I don\u2019t know that I\u2019ve ever had a real life experience that\u2019s done what La La \nLand has to me, which is, ", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">emotional</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">La La Land</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the reviewer</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "astonishing", "color": "#C8E6C9", "startPos": 399, "endPos": 410, "beforeText": "ay that La La \nLand did. \nActually, I don\u2019t know that I\u2019ve ever had a real life experience that\u2019s done what La La \nLand has to me, which is, frankly, ", "extractionText": "astonishing", "afterText": ". \nIt\u2019s rare that I see a movie that, in retrospect, makes every other movie I\u2019ve seen \nseem just a tiny bit worse. But La La Land is one of those fil", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">La La Land</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">astonishing</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "makes every other movie I\u2019ve seen seem just a tiny bit worse", "color": "#C8E6C9", "startPos": 463, "endPos": 524, "beforeText": "had a real life experience that\u2019s done what La La \nLand has to me, which is, frankly, astonishing. \nIt\u2019s rare that I see a movie that, in retrospect, ", "extractionText": "makes every other movie I\u2019ve seen \nseem just a tiny bit worse", "afterText": ". But La La Land is one of those films. It\u2019s a film brimming \nwith life and energy unlike anything I\u2019ve ever seen. Watching the film unfold before \nmy", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">La La Land</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">makes every other movie seem worse</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "brimming with life and energy unlike anything I\u2019ve ever seen", "color": "#C8E6C9", "startPos": 576, "endPos": 637, "beforeText": "t I see a movie that, in retrospect, makes every other movie I\u2019ve seen \nseem just a tiny bit worse. But La La Land is one of those films. It\u2019s a film ", "extractionText": "brimming \nwith life and energy unlike anything I\u2019ve ever seen", "afterText": ". Watching the film unfold before \nmy eyes \u2013 it was an experience. One that I will likely never be able to replicate, but I \nwill desperately try to w", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">La La Land</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">brimming with life and energy</span>}</div>"}, {"index": 4, "class": "audience_impact", "text": "it was an experience", "color": "#D2E3FC", "startPos": 682, "endPos": 702, "beforeText": " La Land is one of those films. It\u2019s a film brimming \nwith life and energy unlike anything I\u2019ve ever seen. Watching the film unfold before \nmy eyes \u2013 ", "extractionText": "it was an experience", "afterText": ". One that I will likely never be able to replicate, but I \nwill desperately try to whenever I can. It\u2019s akin to coming out of a concert, and \ndespera", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">awed</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">Watching the film unfold</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the reviewer</span>}</div>"}, {"index": 5, "class": "audience_impact", "text": "desperately try to whenever I can", "color": "#D2E3FC", "startPos": 767, "endPos": 800, "beforeText": "thing I\u2019ve ever seen. Watching the film unfold before \nmy eyes \u2013 it was an experience. One that I will likely never be able to replicate, but I \nwill ", "extractionText": "desperately try to whenever I can", "afterText": ". It\u2019s akin to coming out of a concert, and \ndesperately listening to music by that band for weeks after, hoping to capture even a \nshred of the emoti", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">longing, nostalgic</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The experience of watching the film</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the reviewer</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "successful on almost every axis", "color": "#C8E6C9", "startPos": 1023, "endPos": 1054, "beforeText": "ic by that band for weeks after, hoping to capture even a \nshred of the emotions felt in the moment.\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nLa La Land is a film that is ", "extractionText": "successful on almost every axis", "afterText": ", and it really had to, to sell \nwhat it\u2019s doing. This applies especially to the performs, and, surprising no one, both \nEmma Stone and Ryan Gosling w", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">La La Land</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">successful on almost every axis</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "outstanding", "color": "#C8E6C9", "startPos": 1208, "endPos": 1219, "beforeText": "d it really had to, to sell \nwhat it\u2019s doing. This applies especially to the performs, and, surprising no one, both \nEmma Stone and Ryan Gosling were ", "extractionText": "outstanding", "afterText": ". The duo share an incredible \nchemistry from their first, speechless, interaction with one another. \nFor a film that is ostensibly a musical, La La L", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Emma Stone and Ryan Gosling</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">outstanding</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "incredible chemistry", "color": "#C8E6C9", "startPos": 1238, "endPos": 1259, "beforeText": "hat it\u2019s doing. This applies especially to the performs, and, surprising no one, both \nEmma Stone and Ryan Gosling were outstanding. The duo share an ", "extractionText": "incredible \nchemistry", "afterText": " from their first, speechless, interaction with one another. \nFor a film that is ostensibly a musical, La La Land often relies on quieter moments, \nfr", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Emma Stone and Ryan Gosling</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">incredible chemistry</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "adept at handling such roles", "color": "#C8E6C9", "startPos": 1467, "endPos": 1496, "beforeText": "r. \nFor a film that is ostensibly a musical, La La Land often relies on quieter moments, \nfree of dialogue or singing. Fortunately, the two leads are ", "extractionText": "adept at handling such \nroles", "afterText": ". Their control over their bodies and facial expressions is even more impressive \nthan their ability to deliver their lines. The wide range of perform", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The two leads</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">adept at handling such roles</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "even more impressive", "color": "#C8E6C9", "startPos": 1556, "endPos": 1576, "beforeText": "\nfree of dialogue or singing. Fortunately, the two leads are adept at handling such \nroles. Their control over their bodies and facial expressions is ", "extractionText": "even more impressive", "afterText": " \nthan their ability to deliver their lines. The wide range of performance types in this \nmovie really hammers home just how incredibly talented Stone", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Their control over their bodies and facial expressions</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">even more impressive</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "incredibly talented", "color": "#C8E6C9", "startPos": 1701, "endPos": 1720, "beforeText": "s is even more impressive \nthan their ability to deliver their lines. The wide range of performance types in this \nmovie really hammers home just how ", "extractionText": "incredibly talented", "afterText": " Stone and Gosling are. \nThey go from conversing to singing and dancing as if it\u2019s nothing, and the bombastic, \noften over the top musical numbers are", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Stone and Gosling</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">incredibly talented</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "a pleasure to watch", "color": "#C8E6C9", "startPos": 1871, "endPos": 1890, "beforeText": "Stone and Gosling are. \nThey go from conversing to singing and dancing as if it\u2019s nothing, and the bombastic, \noften over the top musical numbers are ", "extractionText": "a pleasure to watch", "afterText": ". The choreography and \ncinematography are both excellent, capturing the vibrant emotions conveyed by the \nslightest movements of the performers. \nAnd", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the bombastic, often over the top musical numbers</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">a pleasure to watch</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "The choreography and cinematography are both excellent", "color": "#C8E6C9", "startPos": 1892, "endPos": 1947, "beforeText": ". \nThey go from conversing to singing and dancing as if it\u2019s nothing, and the bombastic, \noften over the top musical numbers are a pleasure to watch. ", "extractionText": "The choreography and \ncinematography are both excellent", "afterText": ", capturing the vibrant emotions conveyed by the \nslightest movements of the performers. \nAnd to be perfectly clear, I\u2019m not a huge of fan of musical ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The choreography and cinematography</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">both excellent</span>}</div>"}, {"index": 14, "class": "opinion_statement", "text": "I\u2019m not a huge of fan of musical numbers in films", "color": "#C8E6C9", "startPos": 2064, "endPos": 2113, "beforeText": "cinematography are both excellent, capturing the vibrant emotions conveyed by the \nslightest movements of the performers. \nAnd to be perfectly clear, ", "extractionText": "I\u2019m not a huge of fan of musical numbers in films", "afterText": ". I \ngenerally find them distracting and immersion-breaking, but here, they were a treat. \nWhenever one began, I found myself becoming giddy with exci", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Musical numbers in films</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">not a huge fan</span>}</div>"}, {"index": 15, "class": "opinion_statement", "text": "I generally find them distracting and immersion-breaking", "color": "#C8E6C9", "startPos": 2115, "endPos": 2172, "beforeText": "brant emotions conveyed by the \nslightest movements of the performers. \nAnd to be perfectly clear, I\u2019m not a huge of fan of musical numbers in films. ", "extractionText": "I \ngenerally find them distracting and immersion-breaking", "afterText": ", but here, they were a treat. \nWhenever one began, I found myself becoming giddy with excitement. \nMy enjoyment of them here stems partially from the", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Musical numbers in films</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">distracting and immersion-breaking</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "here, they were a treat", "color": "#C8E6C9", "startPos": 2178, "endPos": 2201, "beforeText": "ormers. \nAnd to be perfectly clear, I\u2019m not a huge of fan of musical numbers in films. I \ngenerally find them distracting and immersion-breaking, but ", "extractionText": "here, they were a treat", "afterText": ". \nWhenever one began, I found myself becoming giddy with excitement. \nMy enjoyment of them here stems partially from them being an important element ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Musical numbers</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">a treat</span>}</div>"}, {"index": 17, "class": "audience_impact", "text": "I found myself becoming giddy with excitement", "color": "#D2E3FC", "startPos": 2224, "endPos": 2269, "beforeText": "huge of fan of musical numbers in films. I \ngenerally find them distracting and immersion-breaking, but here, they were a treat. \nWhenever one began, ", "extractionText": "I found myself becoming giddy with excitement", "afterText": ". \nMy enjoyment of them here stems partially from them being an important element \nof the film \u2013 it is, after all, about an actress and a pianist. It\u2019", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">giddy with excitement</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">Whenever one began</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the reviewer</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "them being an important element of the film", "color": "#C8E6C9", "startPos": 2319, "endPos": 2363, "beforeText": "ing, but here, they were a treat. \nWhenever one began, I found myself becoming giddy with excitement. \nMy enjoyment of them here stems partially from ", "extractionText": "them being an important element \nof the film", "afterText": " \u2013 it is, after all, about an actress and a pianist. It\u2019s kind of what they do, \nand expressing themselves to one another, through their art, is more ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Musical numbers</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">important element</span>}</div>"}, {"index": 19, "class": "opinion_statement", "text": "expressing themselves to one another, through their art, is more powerful than any scrap of dialogue could have been", "color": "#C8E6C9", "startPos": 2448, "endPos": 2565, "beforeText": "stems partially from them being an important element \nof the film \u2013 it is, after all, about an actress and a pianist. It\u2019s kind of what they do, \nand ", "extractionText": "expressing themselves to one another, through their art, is more powerful than \nany scrap of dialogue could have been", "afterText": ". \nThat being said, I likely could be convinced otherwise, considering the quality of La \nLa Land\u2019s script. It\u2019s compacted to the point where every ut", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Expressing themselves through art</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">more powerful than any scrap of dialogue</span>}</div>"}, {"index": 20, "class": "opinion_statement", "text": "every uttered word feels absolutely necessary", "color": "#C8E6C9", "startPos": 2707, "endPos": 2753, "beforeText": "ave been. \nThat being said, I likely could be convinced otherwise, considering the quality of La \nLa Land\u2019s script. It\u2019s compacted to the point where ", "extractionText": "every uttered word feels \nabsolutely necessary", "afterText": ". It never gets bogged down in explaining things or overlong \nconversations padded out to add to the run time. No, this is a film in which very little", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Every uttered word</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">absolutely necessary</span>}</div>"}, {"index": 21, "class": "opinion_statement", "text": "It never gets bogged down in explaining things or overlong conversations padded out to add to the run time", "color": "#C8E6C9", "startPos": 2755, "endPos": 2862, "beforeText": "nvinced otherwise, considering the quality of La \nLa Land\u2019s script. It\u2019s compacted to the point where every uttered word feels \nabsolutely necessary. ", "extractionText": "It never gets bogged down in explaining things or overlong \nconversations padded out to add to the run time", "afterText": ". No, this is a film in which very little \nactually feels scripted. It\u2019s a story about two humans, and those characters act, \nspeak, and dream like re", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The script</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">never gets bogged down</span>}</div>"}, {"index": 22, "class": "opinion_statement", "text": "very little actually feels scripted", "color": "#C8E6C9", "startPos": 2892, "endPos": 2928, "beforeText": "y necessary. It never gets bogged down in explaining things or overlong \nconversations padded out to add to the run time. No, this is a film in which ", "extractionText": "very little \nactually feels scripted", "afterText": ". It\u2019s a story about two humans, and those characters act, \nspeak, and dream like real people. \nAnd it\u2019s this element of the film that explains my emo", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">very little actually feels scripted</span>}</div>"}, {"index": 23, "class": "opinion_statement", "text": "those characters act, speak, and dream like real people", "color": "#C8E6C9", "startPos": 2965, "endPos": 3021, "beforeText": "conversations padded out to add to the run time. No, this is a film in which very little \nactually feels scripted. It\u2019s a story about two humans, and ", "extractionText": "those characters act, \nspeak, and dream like real people", "afterText": ". \nAnd it\u2019s this element of the film that explains my emotional reaction to it. I was so \nengrossed in the story of Mia and Sebastian that it became e", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The characters</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">act, speak, and dream like real people</span>}</div>"}, {"index": 24, "class": "audience_impact", "text": "I was so engrossed in the story of Mia and Sebastian that it became easy to forget that what I was watching wasn\u2019t real", "color": "#D2E3FC", "startPos": 3101, "endPos": 3222, "beforeText": "o humans, and those characters act, \nspeak, and dream like real people. \nAnd it\u2019s this element of the film that explains my emotional reaction to it. ", "extractionText": "I was so \nengrossed in the story of Mia and Sebastian that it became easy to forget that what I \nwas watching wasn\u2019t real", "afterText": ". Yeah, that\u2019s something that gets tossed around a lot, and \nI\u2019m certainly guilty of it. What can I say? I\u2019m often prone to hyperbole. But when I \napp", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">engrossed, forgetting reality</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The story of Mia and Sebastian</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the reviewer</span>}</div>"}, {"index": 25, "class": "opinion_statement", "text": "there is no hyperbole there at all", "color": "#C8E6C9", "startPos": 3427, "endPos": 3454, "beforeText": " and \nI\u2019m certainly guilty of it. What can I say? I\u2019m often prone to hyperbole. But when I \napply that phrase to La La Land, trust me when I say that ", "extractionText": "there is no hyperbole there", "afterText": "\n&quot;&quot;&quot;\n\n**Page 3**\n&quot;&quot;&quot;\nat all. \nIt isn\u2019t just the characters that this applies to \u2013 it\u2019s the setting as well. While the film \ntakes place in modern day ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The statement about the film&#x27;s realism</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">no hyperbole</span>}</div>"}, {"index": 26, "class": "opinion_statement", "text": "it manages to also capture an older version of the city", "color": "#C8E6C9", "startPos": 3617, "endPos": 3673, "beforeText": "3**\n&quot;&quot;&quot;\nat all. \nIt isn\u2019t just the characters that this applies to \u2013 it\u2019s the setting as well. While the film \ntakes place in modern day Los Angeles, ", "extractionText": "it manages to also capture an older version of \nthe city", "afterText": ". After all, it is an homage to classic films of this genre. There\u2019s even a scene, \nabout halfway through, where the film directly acknowledges this. ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The setting</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">capture an older version</span>}</div>"}, {"index": 27, "class": "opinion_statement", "text": "it is an homage to classic films of this genre", "color": "#C8E6C9", "startPos": 3686, "endPos": 3732, "beforeText": "it\u2019s the setting as well. While the film \ntakes place in modern day Los Angeles, it manages to also capture an older version of \nthe city. After all, ", "extractionText": "it is an homage to classic films of this genre", "afterText": ". There\u2019s even a scene, \nabout halfway through, where the film directly acknowledges this. The moment \napplies to something else that\u2019s going on, of c", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">an homage</span>}</div>"}, {"index": 28, "class": "opinion_statement", "text": "I don\u2019t really have much of an affinity for the so-called \u201cGolden Age.\u201d", "color": "#C8E6C9", "startPos": 3991, "endPos": 4063, "beforeText": "s to something else that\u2019s going on, of course, but it seems difficult to not miss \nthe self-referential nature of the lines. \nTo be entirely honest, ", "extractionText": "I don\u2019t really have much of an affinity for the so-called \u201cGolden \nAge.\u201d", "afterText": " I mean, yeah, I can recognize their importance and impact. But I won\u2019t be able \nto point out every little detail about La La Land that acts as an hom", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The Golden Age</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">don\u2019t really have much of an affinity</span>}</div>"}, {"index": 29, "class": "opinion_statement", "text": "I do truly love how that is applied to the modern era.", "color": "#C8E6C9", "startPos": 4254, "endPos": 4308, "beforeText": "rtance and impact. But I won\u2019t be able \nto point out every little detail about La La Land that acts as an homage. However, I \nknow the aesthetic, and ", "extractionText": "I do truly love how that is applied to the modern era.", "afterText": " \nThere\u2019s very little \u2013 nothing, actually \u2013 that didn\u2019t impress me about La La Land. It\u2019s \nan intricately crafted, beautiful narrative, one that is tr", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The aesthetic applied to the modern era</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">truly love</span>}</div>"}, {"index": 30, "class": "opinion_statement", "text": "There\u2019s very little \u2013 nothing, actually \u2013 that didn\u2019t impress me about La La Land.", "color": "#C8E6C9", "startPos": 4310, "endPos": 4392, "beforeText": "ry little detail about La La Land that acts as an homage. However, I \nknow the aesthetic, and I do truly love how that is applied to the modern era. \n", "extractionText": "There\u2019s very little \u2013 nothing, actually \u2013 that didn\u2019t impress me about La La Land.", "afterText": " It\u2019s \nan intricately crafted, beautiful narrative, one that is truly deserving of every last bit \nof praise. If you haven\u2019t already (or can\u2019t, due to", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">La La Land</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">nothing, actually \u2013 that didn\u2019t impress me</span>}</div>"}, {"index": 31, "class": "opinion_statement", "text": "It\u2019s an intricately crafted, beautiful narrative, one that is truly deserving of every last bit of praise.", "color": "#C8E6C9", "startPos": 4393, "endPos": 4501, "beforeText": "hetic, and I do truly love how that is applied to the modern era. \nThere\u2019s very little \u2013 nothing, actually \u2013 that didn\u2019t impress me about La La Land. ", "extractionText": "It\u2019s \nan intricately crafted, beautiful narrative, one that is truly deserving of every last bit \nof praise.", "afterText": " If you haven\u2019t already (or can\u2019t, due to the film being released on three \ndifferent dates, depending on where you live), make it your number one pri", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The narrative</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">intricately crafted, beautiful narrative, one that is truly deserving of every last bit of praise</span>}</div>"}, {"index": 32, "class": "audience_impact", "text": "make it your number one priority to see this film.", "color": "#D2E3FC", "startPos": 4624, "endPos": 4675, "beforeText": " every last bit \nof praise. If you haven\u2019t already (or can\u2019t, due to the film being released on three \ndifferent dates, depending on where you live), ", "extractionText": "make it your number one priority to \nsee this film.", "afterText": "\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">motivated, encouraged</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
